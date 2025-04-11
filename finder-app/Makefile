@@ -10,6 +10,7 @@ endif
 CC = gcc
 LD = ld
 .PHONY: $(TARGET)
+all: $(TARGET)
 default: $(TARGET)
 clean: 
 	rm -f $(OBJS) $(TARGET)
