@@ -4,11 +4,11 @@ DAEMON="aesdsocket"
 case "$1" in
   start)
     echo 
-        echo "Starting network: "
-    start-stop-daemon --start --name $DAEMON --startas "/usr/bin/$DAEMON"
+        echo "Starting aesdsocket: "
+        start-stop-daemon --start --name $DAEMON --startas "/usr/bin/$DAEMON" -- -d
         ;;
   stop)
-        printf "Stopping network: "
+        echo "Stopping aesdsocket: "
         start-stop-daemon --stop --name $DAEMON 
         ;;
   restart|reload)
